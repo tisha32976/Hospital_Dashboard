@@ -60,4 +60,4 @@ The regression fit (R² = 0.71) is a simplified model meant to illustrate the de
 
 Screenshots-
 
-<!-- Add your dashboard screenshots below. Example: --> <!-- ![Patients Page](screenshots/patients-page.png) --> <!-- ![Staff Page](screenshots/staff-page.png) --> <!-- ![Services Page](screenshots/services-page.png) -->
+https://github.com/tisha32976/Hospital_Dashboard/blob/main/Screenshot%202026-09-15%20211909.png
