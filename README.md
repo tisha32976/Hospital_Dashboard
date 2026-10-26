@@ -58,6 +58,26 @@ Explore the three report pages using the service slicer to filter by Emergency, 
 This is a portfolio/analytics project built to demonstrate end-to-end dashboard design: data modeling, DAX measure development, and insight-driven storytelling
 The regression fit (R² = 0.71) is a simplified model meant to illustrate the demand-capacity relationship, not a validated clinical/operations model
 
+## SQL Analysis (SQLite)
+
+Eight queries in `hospital_queries.sql` validate the dashboard figures and add depth.
+
+| # | Question | Verdict |
+|---|----------|---------|
+| 1 | Refusal rate by service | Emergency refuses 80.9% vs ICU 17.9% |
+| 2 | Overall admit vs refuse | 43.4% admitted, 56.6% refused |
+| 3 | Demand-to-capacity by service | Highest-pressure service also has the highest refusal rate |
+| 4 | Worst weeks by refusals | Week 5 is worst: 470 refused (81.9%) |
+| 5 | Event impact | Flu lifts refusals to 78.2% (baseline 50.5%); strikes cut morale to 53.7 (baseline 73.1) |
+| 6 | Monthly demand trend
+| 7a | Attendance by role and service | Flat at ~59–60%, so it doesn't explain refusals |
+| 7b | Roster data quality | 16 scheduled staff missing from roster; `staff_id` doesn't match across tables, so joined on `staff_name` |
+| 8 | Weeks above own-service average | week 15 has higher refusal rate of about 75%
+
+**Skills used:** aggregation, weighted rates, CASE/GROUP BY, LEFT JOIN anti-join, CTEs, window functions.
+
+**Caveat:** strike findings rest on only 11 service-weeks, so they're indicative, not conclusive.
+
 Screenshots-
 
 ![Dashboard Preview](https://github.com/tisha32976/Hospital_Dashboard/blob/main/Screenshot%202026-09-15%20211909.png)
