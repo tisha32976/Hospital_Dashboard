@@ -69,7 +69,7 @@ Eight queries in `hospital_queries.sql` validate the dashboard figures and add d
 | 3 | Demand-to-capacity by service | Highest-pressure service also has the highest refusal rate |
 | 4 | Worst weeks by refusals | Week 5 is worst: 470 refused (81.9%) |
 | 5 | Event impact | Flu lifts refusals to 78.2% (baseline 50.5%); strikes cut morale to 53.7 (baseline 73.1) |
-| 6 | Monthly demand trend
+| 6 | Monthly demand trend | Emergency has 5.2 requests per bed vs 1.8 General Medicine, 1.2 Surgery and 1.0 ICU, and the ranking tracks refusals |
 | 7a | Attendance by role and service | Flat at ~59–60%, so it doesn't explain refusals |
 | 7b | Roster data quality | 16 scheduled staff missing from roster; `staff_id` doesn't match across tables, so joined on `staff_name` |
 | 8 | Weeks above own-service average | week 15 has higher refusal rate of about 75%
